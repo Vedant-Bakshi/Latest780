@@ -25,4 +25,11 @@ resource "aws_subnet" "private" {
     Name = "Private"
   }
 }
+resource "aws_subnet" "private1" {
+  vpc_id     = aws_vpc.myvpc.id
+  cidr_block = "10.10.3.0/24"
 
+  tags = {
+    Name = "Private2"
+  }
+}
